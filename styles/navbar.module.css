@@ -1,0 +1,131 @@
+.admin-navbar {
+  width: 20vw;
+  height: 100vh;
+  background-color: #0A111F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-20vw);
+  transition: 0.5s;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 100;
+}
+
+.logo {
+  background-image: url('../public/logo.png');
+  background-size: contain;
+
+  background-repeat: no-repeat;
+  object-fit: fill;
+
+  /* border: red solid; */
+
+  width: 100%;
+  height: 4.05rem;
+  position: relative;
+
+  /* margin-top: 5rem; */
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  height: 5vw;
+  width: 100%;
+  background-color: #0A111F;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transform: translateX(10%);
+  color: #FCA311;
+  font-weight: 300;
+}
+
+.user {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.menu {
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 2vw;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.menu.change {
+  transform: translateX(20vw);
+}
+
+.line-1.change {
+  width: 50%;
+  transform: translateY(0.46rem) rotate(-25deg);
+  transform-origin: left;
+}
+
+.line-3.change {
+  width: 50%;
+  transform: translateY(-0.46rem) rotate(+25deg);
+  transform-origin: left;
+}
+
+.admin-navbar.change {
+  transform: translateX(0rem);
+}
+
+.logo:after {
+  content: "";
+  position: absolute;
+  width: 20vw;
+  height: 0.05rem;
+  background-color: #14213d;
+  bottom: 0;
+  left: -1rem;
+}
+
+.admin-navbar-element {
+  color: #e5e5e5;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: start;
+  padding: 0.75rem;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.admin-navbar-element:after {
+  content: "";
+  position: absolute;
+  width: 20vw;
+  height: 0.05rem;
+  background-color: #14213d;
+  bottom: 0;
+  left: -1rem;
+}
+
+.admin-navbar-element:hover {
+  color: #FCA311;
+}
