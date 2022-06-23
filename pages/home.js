@@ -1,10 +1,11 @@
 import Navbar from "../components/navbar"
 import styles from "../styles/home.module.css"
-import Donors from "../components/donors"
-import Donations from "../components/donations"
+import Donors from "../components/donorsComponent"
+import Donations from "../components/donationsComponent"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useCookies } from "react-cookie"
+import Link from "next/link"
 
 const Home = () => {
   const [cookie, setCookie] = useCookies()
@@ -32,14 +33,18 @@ const Home = () => {
     } catch (e) {
       console.log(e)
     }
-  })
+  }, [])
   return (<>
     <Navbar />
     <div className={styles['home-container']}>
-      <div className={styles['home-donors']}>
-        <div className={styles['home-header']}> DONORS </div>
-        <Donors />
-      </div>
+
+      <Link href="/donors">
+        <div className={styles['home-donors']}>
+          <div className={styles['home-header']}> DONORS </div>
+          <Donors />
+        </div>
+      </Link>
+
       <div className={styles['donations-container']}>
         <div className={styles['home-recent-donations']}>
           <div className={styles['home-header']}> RECENT DONATIONS </div>

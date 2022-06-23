@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
-import styles from '../styles/donors.module.css'
+import styles from '../styles/donorsComponent.module.css'
 import Table from './table'
 
 const Donors = () => {
@@ -30,7 +30,7 @@ const Donors = () => {
         "Mobile Number",
         "Date of birth",
         ""
-      ]} tableData={donors} button={true} />
+      ]} tableData={donors} button={"View KYC"} />
     </div >
   )
 }

@@ -19,6 +19,13 @@ const NewAdmin = (props) => {
   const confirmPasswordInputRef = useRef()
   const router = useRouter()
 
+  const resetForm = () => {
+    usernameInputRef.current.value = ""
+    phoneInputRef.current.value = ""
+    passwordInputRef.current.value = ""
+    confirmPasswordInputRef.current.value = ""
+  }
+
   const adminCreateValidator = (admin) => {
     if (!validator.isMobilePhone(admin.phone) || admin.phone.length != 10) {
       setError("Invalid Mobile Number Entered")
@@ -57,6 +64,7 @@ const NewAdmin = (props) => {
       confirmPassword: confirmPasswordInputRef.current.value
     }
     if (adminCreateValidator(admin)) {
+      setError(false)
       try {
         delete admin.confirmPassword
         const res = await axios.post('http://localhost:3001/api/admin', admin, {
@@ -64,11 +72,11 @@ const NewAdmin = (props) => {
             authorization: cookie.user
           }
         })
-        if (res.data) {
-          router.push('/')
-        }
+        resetForm()
+        alert(`New Admin Created`)
+        console.log(res)
       } catch (e) {
-        console.log(e)
+        setError(e.response.data.message)
       }
     }
   }

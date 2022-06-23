@@ -28,22 +28,34 @@ const Navbar = (props) => {
           Swagatham Admin Panel
         </div>
 
-        <div className={styles['user']}>
+        {cookie.username && (<div className={styles['user']}>
           User: {cookie.username}
-        </div>
+        </div>)}
+
+        {!cookie.username && (<div className={styles['user']}>
+          Not Logged In
+        </div>)}
       </div>
 
       <div className={`${styles['admin-navbar']} ${toggle ? styles['change'] : ""}`}>
         <div src="../public/logo.png" className={`${styles['logo']}`}></div>
         <span className={styles['navbar-line']}></span>
         <div className={styles['admin-navbar-elements']}>
-          <div className={styles['admin-navbar-element']}>Home</div>
-          <div className={styles['admin-navbar-element']}>Donors</div>
+          <Link href="/home">
+            <div className={styles['admin-navbar-element']}>Home</div>
+          </Link>
+          <Link href="/donors/">
+            <div className={styles['admin-navbar-element']}>Donors</div>
+          </Link>
           <Link href="/newadmin">
             <div className={styles['admin-navbar-element']}>New Admin</div>
           </Link>
-          <div className={styles['admin-navbar-element']}>Donations</div>
-          <div className={styles['admin-navbar-element']}>Logs</div>
+          <Link href="/donations">
+            <div className={styles['admin-navbar-element']}>Donations</div>
+          </Link>
+          <Link href="/logs">
+            <div className={styles['admin-navbar-element']}>Logs</div>
+          </Link>
           <Link href="/logout">
             <div className={styles['admin-navbar-element']}>Logout</div>
           </Link>

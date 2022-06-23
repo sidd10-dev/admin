@@ -7,8 +7,11 @@
   background-color: rgba(10, 17, 31, 1);
   padding: 1rem;
   color: #f2f2f2;
+  z-index: -1;
   /* height: 80%; */
   /* border: solid red; */
+
+  /* position: absolute; */
 }
 
 .donor-table-header th {
@@ -31,9 +34,11 @@
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: -1;
   /* -ms-overflow-style: none;
   scrollbar-width: none; */
   /* transform: translateY(-0.5rem); */
+  /* position: absolute; */
 }
 
 .donor-table-content {
@@ -57,4 +62,5 @@
   border-bottom: solid #0a111f 0.005rem;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 0.9rem;
 }

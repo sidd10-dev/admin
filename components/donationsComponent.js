@@ -1,4 +1,4 @@
-import styles from '../styles/donations.module.css'
+import styles from '../styles/donationsComponent.module.css'
 import Table from './table'
 
 const Donations = (props) => {

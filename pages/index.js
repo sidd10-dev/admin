@@ -22,12 +22,13 @@ export default function Home() {
   const adminLoginSubmitHandler = async (event) => {
     event.preventDefault()
     const phone = phoneInputRef.current.value
-    const password = phoneInputRef.current.value
+    const password = passwordInputRef.current.value
 
     if (!validator.isMobilePhone(phone) || phone.length != 10)
       setError("Invalid Mobile Number!")
     else
       setError("")
+    console.log(phone, password)
     axios.post('http://localhost:3001/api/login', {
       phone,
       password

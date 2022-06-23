@@ -1,5 +1,31 @@
-.donation-container {
-  /* overflow-x: hidden; */
-  height: 45vh;
+.donations-page-container {
+  /* background-color: #f2f2f2; */
+  padding: 1rem;
+  width: 90%;
+  margin-top: 7rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.donations-page-recent-donations,
+.donations-page-top-donations {
+  width: 100%;
+  background-color: #f2f2f2;
+  box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.donations-page-table {
+  height: 50vh;
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.donations-page-header {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #14213d;
+  position: relative;
 }

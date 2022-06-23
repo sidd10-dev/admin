@@ -1,5 +1,6 @@
 import styles from '../styles/table.module.css'
 import Button from './button'
+import Link from 'next/link'
 
 const Table = (props) => {
   return (
@@ -27,7 +28,11 @@ const Table = (props) => {
                       <td>{entry[e]}</td>
                     ))}
                     {props.button && (
-                      <td><Button className={styles['kyc-button']} containerClassName={styles['kyc-button-container']}>View KYC</Button></td>
+                      <td>
+                        <Link href="kyc/">
+                          <Button className={styles['kyc-button']} containerClassName={styles['kyc-button-container']}>{props.button}</Button>
+                        </Link>
+                      </td>
                     )}
                   </tr>
                 ))}
