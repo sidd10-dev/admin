@@ -28,11 +28,13 @@ const Table = (props) => {
                       <td>{entry[e]}</td>
                     ))}
                     {props.button && (
-                      <td>
-                        <Link href="kyc/">
+                      <Link href={`/donors/${entry.id}`}>
+                        <td>
+
                           <Button className={styles['kyc-button']} containerClassName={styles['kyc-button-container']}>{props.button}</Button>
-                        </Link>
-                      </td>
+
+                        </td>
+                      </Link>
                     )}
                   </tr>
                 ))}
@@ -40,7 +42,8 @@ const Table = (props) => {
             </table>
           </div>
         </>
-      )}
+      )
+      }
 
     </>
   )

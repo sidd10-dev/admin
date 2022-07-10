@@ -21,7 +21,7 @@ const Donations = (props) => {
           authorization: cookie.user
         }
       })
-      // console.log(td.data)
+      // console  .log(td.data)
       await setTopDonations(prev => {
         return td.data
       })

@@ -59,7 +59,7 @@ const Donors = (props) => {
       <Navbar />
       <div className={styles['donors-page-container']}>
         <div className={styles['donors-page-header']}>DONORS</div>
-        <div className={styles['donors-page-filter']}>
+        {/* <div className={styles['donors-page-filter']}>
           <div className={styles['donors-page-filter-header']}>Filter By:</div>
           <div className={styles['donors-page-dropdown']} onClick={() => { setDisplayMenus(prev => !prev) }}>
             Select
@@ -71,8 +71,8 @@ const Donors = (props) => {
               </div>
             )}
           </div>
-        </div>
-        {filterSelect == "dob" && (
+        </div> */}
+        {/* {filterSelect == "dob" && (
           <div className={styles['donors-button-container']
           }>
             <span className={`${styles['span']} ${styles['span-1']}`}></span>
@@ -81,8 +81,8 @@ const Donors = (props) => {
             <span className={`${styles['span']} ${styles['span-4']}`}></span>
             <button type="submit" className={styles['donors-button']} onClick={sendMessageHandler}>Send Wish Message</button>
           </div >
-        )}
-        <div className={`${styles['donors-page-table-container']} ${filterSelect == "none" ? styles['donors-page-table-margin'] : ""}`}>
+        )} */}
+        <div className={`${styles['donors-page-table-container']}`}>
           <Table tableHeads={[
             "ID",
             "Name",

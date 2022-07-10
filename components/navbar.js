@@ -56,6 +56,21 @@ const Navbar = (props) => {
           <Link href="/logs">
             <div className={styles['admin-navbar-element']}>Logs</div>
           </Link>
+          <Link href="/blog">
+            <div className={styles['admin-navbar-element']}>New Blog</div>
+          </Link>
+          <Link href="/blog/drafts">
+            <div className={styles['admin-navbar-element']}>View Drafts</div>
+          </Link>
+          <Link href="/blog/published">
+            <div className={styles['admin-navbar-element']}>Published Blogs</div>
+          </Link>
+          <Link href="/kyc">
+            <div className={styles['admin-navbar-element']}>Add/Edit KYC</div>
+          </Link>
+          <Link href="/message">
+            <div className={styles['admin-navbar-element']}>Send Message</div>
+          </Link>
           <Link href="/logout">
             <div className={styles['admin-navbar-element']}>Logout</div>
           </Link>

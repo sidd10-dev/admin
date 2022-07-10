@@ -1,0 +1,164 @@
+.drafts-container {}
+
+.drafts {
+  margin-top: 6rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: #f2f2f2;
+  width: 90%;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.drafts-header {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #14213d;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.draft {
+  background-color: rgba(20, 33, 61, 1);
+  box-shadow: 0.1rem 0.1rem 1rem rgba(20, 33, 61, 1);
+  padding: 1rem;
+  width: 80%;
+  height: 8rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  color: #FCA311;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+
+.draft::before {
+  position: absolute;
+  content: "";
+  width: 0.3rem;
+  height: 100%;
+  background-color: #FCA311;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  top: 0;
+  left: 0;
+}
+
+.draft-img {
+  width: 7rem;
+  height: 6rem;
+}
+
+.draft-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  /* border: solid red; */
+}
+
+.draft-title {
+  margin-bottom: 0.5rem;
+}
+
+.draft-author {
+  /* font-size: 0.8rem; */
+}
+
+.draft-title,
+.draft-author {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.draft-title span,
+.draft-author span {
+  text-transform: uppercase;
+  font-weight: 500;
+  /* width: 15%; */
+  margin-right: 1rem;
+  /* border: solid red; */
+  text-align: left;
+}
+
+.draft-button-container {
+  background-color: #0a111f;
+  width: 4rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #FCA311;
+  /* margin: auto; */
+  position: relative;
+  /* margin-top: 3rem; */
+}
+
+.draft-button {
+  background-color: #0a111f;
+  border: none;
+  text-transform: uppercase;
+  color: #FCA311;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+}
+
+.span {
+  position: absolute;
+  background-color: #FCA311;
+  transition: 0.3s;
+  width: 0;
+  height: 0;
+}
+
+.span-1 {
+  top: 0;
+  left: 0;
+}
+
+.span-2 {
+  top: 0;
+  left: 0;
+}
+
+.span-3 {
+  bottom: 0;
+  right: 0;
+}
+
+.span-4 {
+  bottom: 0;
+  right: 0;
+}
+
+.draft-button-container:hover .span-1 {
+  width: 0.1rem;
+  height: 100%;
+}
+
+.draft-button-container:hover .span-2 {
+  width: 100%;
+  height: 0.1rem;
+}
+
+.draft-button-container:hover .span-3 {
+  width: 0.1rem;
+  height: 100%;
+}
+
+.draft-button-container:hover .span-4 {
+  width: 100%;
+  height: 0.1rem;
+}
