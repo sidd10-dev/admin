@@ -6,7 +6,7 @@ export const getStaticPaths = async () => {
     const res = await axios.get("http://localhost:3001/api/getKycIds")
     const paths = res.data.map(id => {
       return {
-        params: { 
+        params: {
           id: id.id.toString()
         }
       }
@@ -40,7 +40,7 @@ export const getStaticProps = async (ctx) => {
   }
 }
 
-const KycId = (props) => {
+const KYC = (props) => {
   return (
     <>
       hello world
@@ -48,4 +48,4 @@ const KycId = (props) => {
   )
 }
 
-return KycId
+export default KYC
