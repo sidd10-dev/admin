@@ -6,7 +6,7 @@ export const getStaticPaths = async () => {
     const res = await axios.get("http://localhost:3001/api/getKycIds")
     const paths = res.data.map(id => {
       return {
-        params: {
+        params: { 
           id: id.id.toString()
         }
       }
